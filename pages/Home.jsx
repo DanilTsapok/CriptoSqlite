@@ -11,7 +11,7 @@ import {
 } from "../store/CryptoSlice";
 import { Image } from "react-native";
 
-const HomeScreen = ({ navigation }) => {
+const Home = ({ navigation }) => {
   const crypto = useSelector((state) =>
     state.crypto.filter((element) => element.checked)
   );
@@ -25,7 +25,7 @@ const HomeScreen = ({ navigation }) => {
       <View style={styles.container}>
         <View style={styles.header}>
           <TouchableOpacity
-            onPress={() => navigation.navigate("Market")}
+            onPress={() => navigation.navigate("Coins")}
             style={styles.button}
           >
             <Text style={styles.buttonText}>Buy coins</Text>
@@ -165,4 +165,4 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
 });
-export default HomeScreen;
+export default Home;

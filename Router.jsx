@@ -6,9 +6,10 @@ import { setCryptos } from "./store/CryptoSlice";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
 
-import HomeScreen from "./pages/HomeScreen";
 import store from "./store/store";
-import MarketScreen from "./pages/MarketScreen";
+
+import Coins from "./pages/Coins";
+import Home from "./pages/Home";
 const initialState = {
   crypto: [
     {
@@ -96,8 +97,8 @@ function Router() {
             },
           }}
         >
-          <Stack.Screen name="Market" component={MarketScreen} />
-          <Stack.Screen name="Home" component={HomeScreen} />
+          <Stack.Screen name="Coins" component={Coins} />
+          <Stack.Screen name="Home" component={Home} />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>

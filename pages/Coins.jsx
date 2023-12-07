@@ -8,7 +8,7 @@ import { checkCrypto } from "../store/CryptoSlice";
 import { View } from "react-native";
 import { Text } from "react-native";
 
-function MarketScreen() {
+function Coins() {
   const crypto = useSelector((state) => state.crypto);
   const dispatch = useDispatch();
   return (
@@ -72,4 +72,4 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
 });
-export default MarketScreen;
+export default Coins;
